@@ -1,38 +1,59 @@
+
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import {cblogo} from '../assets/index';
+import { cblogo } from '../assets/index';
 
 export default function Header() {
+  const [isScrolledDown, setIsScrolledDown] = useState(false);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.scrollY;
+      setIsScrolledDown(currentScrollPos > prevScrollPos );
+      setPrevScrollPos(currentScrollPos);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [prevScrollPos]);
+
   return (
-    <header >
-        <div >
-            <ul className='flex items-center justify-between py-4'>
-                <Link to="/">
-                    <li className='flex items-center ps-20 pe-0'>
-                        <img src={cblogo} alt="logo" />
-                        <p className='text-logoColor font-logo-bold'>POTATO</p>
-                    </li>
-                </Link>
-                <Link to="/">
-                    <li className='font-semibold'>Home</li>
-                </Link>
-                <Link to="/diseases">
-                    <li className='font-semibold'>Diseases</li>
-                </Link>
-                <Link to="/contact">
-                    <li className='font-semibold'>Contact</li>
-                </Link>
-                <Link to="/diagnose">
-                    <li className='ps-0 pe-20'>
-                        <button className='text-white bg-btnColor border-btnColor hover:bg-btnColor2 hover:font-semibold hover:text-sm rounded-full w-36 h-10'>Diagnose here</button>
-                        
-
-                    </li>
-                    
-                </Link>
-            </ul>
-        </div>
-    </header>
-  )
+    <div
+      className={`w-full fixed top-0 z-40 transition ease-in-out duration-700 ${
+        prevScrollPos === 0 ? 'bg-opacity-0' : isScrolledDown  ? '  hidden' : 'bg-[#E8D8B7] block'
+      }`}
+    >
+      <div className=''>
+        <ul className='flex items-center justify-between py-4'>
+          <Link to='/'>
+            <li className='flex items-center ps-20 pe-0'>
+              <img src={cblogo} alt='logo' />
+              <p className='text-logoColor font-logo-bold text-2xl'>POTATO</p>
+            </li>
+          </Link>
+          <Link to='/'>
+            <li className='text-2xl font-semibold'>Home</li>
+          </Link>
+          <Link to='/diseases'>
+            <li className='text-2xl font-semibold'>Diseases</li>
+          </Link>
+          <Link to='/contact'>
+            <li className='text-2xl font-semibold'>Contact</li>
+          </Link>
+          <Link to='/diagnose'>
+            <li className='ps-0 pe-20'>
+              <button className='text-white bg-btnColor border-btnColor text-2xl hover:bg-btnColor2 hover:font-semibold rounded-full w-60 h-16'>
+                Diagnose here
+              </button>
+            </li>
+          </Link>
+        </ul>
+      </div>
+    </div>
+  );
 }
-
 

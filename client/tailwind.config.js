@@ -17,6 +17,8 @@ export default {
       "btnColor": "#857450",
       "btnColor2": "#876e3a",
       "txtColor": "#3F392D",
+      "txtHead": "#867450",
+      "black": "#000000",
     },
     fontFamily: {
       'Inter': ['Inter', 'sans-serif'],
