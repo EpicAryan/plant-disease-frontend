@@ -35,22 +35,22 @@ export default function Home() {
           <h1 className="flex justify-center text-txtColor font-logo-bold text-[18rem] mx-auto z-0">
             P<span>O</span>TAT<span>O</span>
           </h1>
+          {/* Animate this */}
           <div className="absolute top-[-9rem] left-[-6rem] right-0 bottom-10 z-10">
             <div className=" flex relative justify-center">
-              {/* <div className="z-10 absolute left-1/4"> */}
+              
                 <img
                   src={potato1}
                   alt="potato1"
                   className=" w-[57rem] h-[57rem]  z-10 absolute left-1/4"
                 />
-              {/* </div> */}
-              {/* <div className="absolute right-[30%] top-64"> */}
+             
                 <img
                   src={potato2}
                   alt="potato2"
                   className=" w-[37rem] h-[37rem] absolute right-[30%] top-64"
                 />
-              {/* </div> */}
+              
             </div>
           </div>
         </div>

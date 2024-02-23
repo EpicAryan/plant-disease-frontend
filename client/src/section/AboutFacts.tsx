@@ -1,6 +1,6 @@
 import React from "react";
 import { diseases1, diseases2, diseases3, bgland } from "../assets";
-import {SVG1, SVG2, SVG3} from '../component/SVGComponent';
+import {SVG1, SVG2} from '../component/SVGComponent';
 export default function AboutFacts() {
   const svgData =[
     {id: 'svg1', text: 'The word "potato" comes from the Spanish word "patata," which comes from the Quechua word "papa."'},
@@ -103,8 +103,9 @@ export default function AboutFacts() {
             <h1 className="text-wrap text-txtColor text-7xl">Here are some tips for preventing potato diseases :</h1>
           </div>
           <div>
-            <div>
-              <SVG3 text='heholoe '/>
+            <div className="w-[600px] h-[500px] rounded-2xl bg-white" style={{clipPath: "polygon(0 0, 100% 0, 100% 100%, 75% 87%, 0 86%)"}}>
+              
+
             </div>
             <div>
 
