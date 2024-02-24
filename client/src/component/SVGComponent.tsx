@@ -47,29 +47,6 @@ export const SVG2: React.FC<SVGWithTextProps> = ({id, text}) => {
   );
 };
 
-export const SVG3: React.FC<SVGWithTextProps> = ({ text}) => {
-  return (
-    <svg
-      
-    width="753"
-    height="634"
-    viewBox="0 0 793 634"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      
-      <path
-        d="M1.99805 105.92C1.99805 47.088 48.086 0.999981 106.918 0.999981H685.082C743.914 0.999981 790.002 47.088 790.002 105.92V528.08C790.002 586.912 743.914 633 685.082 633H106.918C48.086 633 1.99805 586.912 1.99805 528.08V105.92Z"
-        fill="#FDF5E6"
-      />
-      <text x="50%" y="40%" dominantBaseline="middle" textAnchor="middle" fill="#3F392D" fontSize="18" className="">
-        {text}
-      </text>
-    </svg>
-  );
-};
 
 
-
-
-export default { SVG1, SVG2, SVG3 };
+export default { SVG1, SVG2};
