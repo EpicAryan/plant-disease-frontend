@@ -10,5 +10,6 @@ import diseases1 from "./diseases1.png";
 import diseases2 from "./diseases2.png";
 import diseases3 from "./diseases3.png";
 import internet from "./Internet.svg";
+import dropIcon from "./dropIcon.svg";
 
-export {cblogo, potato1, potato2,potato3, bgland, about1, about2, about3, diseases1, diseases2, diseases3, internet}
+export {cblogo, potato1, potato2,potato3, bgland, about1, about2, about3, diseases1, diseases2, diseases3, internet, dropIcon}

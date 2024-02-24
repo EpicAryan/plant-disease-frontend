@@ -44,7 +44,7 @@ export default function Header() {
           <Link to='/contact'>
             <li className='text-2xl font-semibold'>Contact</li>
           </Link>
-          <Link to='/diagnose'>
+          <Link to='/diseases'>
             <li className='ps-0 pe-20'>
               <button className='text-white bg-btnColor border-btnColor text-2xl hover:bg-btnColor2 hover:font-semibold rounded-full w-60 h-16'>
                 Diagnose here

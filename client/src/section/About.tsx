@@ -42,7 +42,7 @@ export const About = () => {
                 </div>
                 <div className="flex flex-col justify-center items-center mr-28 mt-10 gap-4">
                     <h3 className="text-txtColor text-xl font-medium ">Click below to get started!</h3>
-                    <Link to="/diagnose">
+                    <Link to="/diseases">
                         <button className='text-white bg-btnColor border-btnColor text-2xl hover:bg-btnColor2 hover:font-semibold rounded-full w-60 h-16 '>Diagnose here</button>
                     </Link>
                 </div>
