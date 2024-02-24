@@ -1,6 +1,7 @@
 import { potato1, potato2, bgland } from "../assets/index";
 import { About } from "../section/About";
 import AboutFacts from "../section/AboutFacts";
+import  Footer  from "../section/Footer";
 
 export default function Home() {
   return (
@@ -55,12 +56,9 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="w-full h-full ">
-        <About />
-      </div>
-      <div className="w-full h-full ">
-        <AboutFacts />
-      </div>
+      <About />
+      <AboutFacts />
+      <Footer />
     </>
   );
 }

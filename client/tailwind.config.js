@@ -19,6 +19,7 @@ export default {
       "txtColor": "#3F392D",
       "txtHead": "#867450",
       "black": "#000000",
+      "icon-bg": "#E8D8B7",
     },
     fontFamily: {
       'Inter': ['Inter', 'sans-serif'],

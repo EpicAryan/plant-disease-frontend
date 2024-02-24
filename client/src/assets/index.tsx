@@ -13,5 +13,6 @@ import internet from "./Internet.svg";
 import dropIcon from "./dropIcon.svg";
 import bulkPotato from "./bulkPotato.png";
 import cblogo2 from "./cblogo2.png";
+import footer from "./footer.svg";
 
-export {cblogo, potato1, potato2,potato3, bgland, about1, about2, about3, diseases1, diseases2, diseases3, internet, dropIcon, bulkPotato, cblogo2} 
+export {cblogo, potato1, potato2,potato3, bgland, about1, about2, about3, diseases1, diseases2, diseases3, internet, dropIcon, bulkPotato, cblogo2, footer} 
