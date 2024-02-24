@@ -19,12 +19,12 @@ const Contact = () => {
           style={{
             backgroundImage: `url(${bgland})`,
             transform: "rotate(180deg)",
-            backgroundSize: "70%",
-           
+            backgroundSize: "78%",
+            backgroundPosition: "left 70%",
           }}
         />
       <div className="w-2/3 h-3/4 relative" >
-        <div className="w-1/3 h-4/5 border-2 border-white rounded-md z-30 absolute top-12 bottom-0 right-0 left-28 pt-8 pl-8 backdrop-blur-md drop-shadow-2xl"
+        <div className="w-1/3 h-4/5 border-2 border-white rounded-md z-30 absolute top-12 bottom-0 right-0 left-28 pt-8 pl-8 backdrop-blur-md shadow-2xl"
         style={{backgroundColor: "rgba(232, 216, 183, 0.2)"}}
 
         >
