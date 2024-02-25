@@ -40,13 +40,15 @@ export const SVG2: React.FC<SVGWithTextProps> = ({id, text}) => {
         d="M0.0147705 50C0.0147705 22.3858 22.4005 0 50.0148 0L625.172 0C652.786 0 675.172 22.3858 675.172 50V120.029C675.172 122.623 675.908 125.164 677.296 127.355C684.232 138.311 673.474 151.876 661.226 147.618L599.134 126.032C595.265 124.687 591.197 124 587.1 124H50.0148C22.4006 124 0.0147705 101.614 0.0147705 74V50Z"
         fill="#867450"
       />
-      <text x="50%" y="40%" dominantBaseline="middle" textAnchor="middle" fill="white" fontSize="18" className="">
+      <text x="50%" y="40%" dominantBaseline="middle" textAnchor="middle" fill="white" fontSize="18"   className="text-wrap" style={{ whiteSpace: 'pre-wrap' }}>
         
         {text}
       </text>
     </svg>
   );
 };
+
+
 
 
 

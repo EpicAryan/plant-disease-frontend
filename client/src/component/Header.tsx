@@ -1,12 +1,14 @@
 
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link , useLocation} from 'react-router-dom';
 import { cblogo } from '../assets/index';
+
 
 export default function Header() {
   const [isScrolledDown, setIsScrolledDown] = useState(false);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
-
+  const location = useLocation();
+  
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.scrollY;
@@ -35,16 +37,16 @@ export default function Header() {
               <p className='text-logoColor font-logo-bold text-2xl'>POTATO</p>
             </li>
           </Link>
-          <Link to='/'>
+          <Link to='/' className={location.pathname === '/' ? 'active-link': ''}>
             <li className='text-2xl font-semibold'>Home</li>
           </Link>
-          <Link to='/diseases'>
+          <Link to='/diseases' className={location.pathname === '/diseases' ? 'active-link': ''}>
             <li className='text-2xl font-semibold'>Diseases</li>
           </Link>
-          <Link to='/contact'>
+          <Link to='/contact' className={location.pathname === '/contact' ? 'active-link': ''}>
             <li className='text-2xl font-semibold'>Contact</li>
           </Link>
-          <Link to='/diseases'>
+          <Link to='/diseases' className={location.pathname === '/diseases' ? 'active-link': ''}>
             <li className='ps-0 pe-20'>
               <button className='text-white bg-btnColor border-btnColor text-2xl hover:bg-btnColor2 hover:font-semibold rounded-full w-60 h-16'>
                 Diagnose here

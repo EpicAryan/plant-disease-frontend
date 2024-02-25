@@ -45,3 +45,7 @@ body{
 .svg{
   clip-path: polygon(0 0, 100% 0, 100% 100%, 75% 87%, 0 86%);
 }
+
+.active-link {
+  color:#857450; 
+}

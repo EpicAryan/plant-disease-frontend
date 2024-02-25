@@ -6,7 +6,7 @@ import  Footer  from "../section/Footer";
 export default function Home() {
   return (
     <>
-      <div className="w-full h-full relative pt-40 z-0">
+      <div className="w-full h-full relative pt-40">
         <div
           className="absolute top-0 right-0 bottom-[-10rem] left-0 bg-no-repeat "
           style={{
@@ -32,14 +32,8 @@ export default function Home() {
               <span>Pomme de terre</span>
             </h3>
           </div>
-
-          <h1 className="flex justify-center text-txtColor font-logo-bold text-[18rem] mx-auto z-0">
-            P<span>O</span>TAT<span>O</span>
-          </h1>
-          {/* Animate this */}
-          <div className="absolute top-[-9rem] left-[-6rem] right-0 bottom-10 z-10">
-            <div className=" flex relative justify-center">
-              
+            {/* Animate this */}
+          <div className="absolute top-[-9rem] left-[-6rem] right-0 bottom-10 flex justify-center z-10">
                 <img
                   src={potato1}
                   alt="potato1"
@@ -51,9 +45,12 @@ export default function Home() {
                   alt="potato2"
                   className=" w-[37rem] h-[37rem] absolute right-[30%] top-64"
                 />
-              
-            </div>
           </div>
+          <h1 className="flex justify-center text-txtColor font-logo-bold text-[18rem] mx-auto z-0">
+            P<span>O</span>TAT<span>O</span>
+          </h1>
+        
+          
         </div>
       </div>
       <About />
