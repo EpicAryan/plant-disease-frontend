@@ -36,7 +36,9 @@ export default {
       'extra-bold': '800',
       'logo-bold': '900'
     },
-    extend: {},
+    extend: {
+      
+    },
   },
   plugins: [],
 }

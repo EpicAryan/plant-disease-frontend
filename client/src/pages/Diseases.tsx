@@ -96,8 +96,9 @@ const Diseases = () => {
         />
         <label
           htmlFor="input-file-upload"
-          className="h-full flex flex-col items-center justify-center border-4 rounded-2xl border-white cursor-pointer  shadow-2xl"
-          style={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }}
+          className="h-full flex flex-col items-center justify-center border-4 rounded-2xl border-white cursor-pointer "
+          style={{ backgroundColor: "rgba(255, 255, 255, 0.1)",
+                  boxShadow: "inset 0 0 30px 15px rgba(255, 255, 255, 0.4), 10px 25px 30px -15px rgba(0, 0, 0, 0.5)", }}
         >
           {imagePreview ? (
             <img
