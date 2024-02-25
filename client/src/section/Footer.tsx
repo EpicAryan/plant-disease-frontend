@@ -60,7 +60,7 @@ const Footer = () => {
                         <Link to="https://github.com/KaiAlan" >
                             <FaGithub size={70}/>
                         </Link>
-                        <Link to="https://github.com/" >
+                        <Link to="https://twitter.com/KaiAlan_" >
                             <FaTwitter size={70}/>
                         </Link>
                     </div>
