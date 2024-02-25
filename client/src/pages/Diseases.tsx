@@ -8,6 +8,7 @@ const Diseases = () => {
   const [imagePreview, setImagePreview] = useState<string | null>(null);
   const [imageWidth, setImageWidth] = useState<number | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+  const [showSubmitButton, setShowSubmitButton] = useState(false);
 
   const handleDrag = (e: React.DragEvent) => {
     e.preventDefault();
@@ -29,6 +30,7 @@ const Diseases = () => {
       reader.onload = () => {
         if (reader.readyState === 2) {
           setImagePreview(reader.result as string);
+          setShowSubmitButton(true);
         }
       };
       reader.readAsDataURL(file);
@@ -43,6 +45,7 @@ const Diseases = () => {
       reader.onload = () => {
         if (reader.readyState === 2) {
           setImagePreview(reader.result as string);
+          setShowSubmitButton(true);
         }
       };
       reader.readAsDataURL(file);
@@ -67,6 +70,12 @@ const Diseases = () => {
 
       setImageWidth(containerHeight * aspectRatio);
     }
+  };
+
+  const handleSubmit = () => {
+    console.log("Submitted successfully");
+    setImagePreview(null);
+    setShowSubmitButton(false);
   };
 
   return (
@@ -137,7 +146,12 @@ const Diseases = () => {
           ></div>
         )}
       </form>
-      <div className="mt-8 text-lg">
+      {showSubmitButton && ( 
+        <button onClick={handleSubmit} className="w-48 h-12 font-bold rounded-full flex items-center justify-center gap-4 text-2xl mx-auto mt-10 bg-txtColor text-white hover:cursor-pointer z-20">
+          Submit
+        </button>
+      )}
+      <div className="mt-8 text-lg" style={{ display: imagePreview ? 'none' : 'block' }}>
         <span className="text-txtHead ">You can also provide</span>
         <span className="text-txtColor"> a link from the web</span>
       </div>
