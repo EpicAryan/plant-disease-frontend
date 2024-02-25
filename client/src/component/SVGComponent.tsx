@@ -41,6 +41,7 @@ export const SVG2: React.FC<SVGWithTextProps> = ({id, text}) => {
         fill="#867450"
       />
       <text x="50%" y="40%" dominantBaseline="middle" textAnchor="middle" fill="white" fontSize="18" className="">
+        
         {text}
       </text>
     </svg>

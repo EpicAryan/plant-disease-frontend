@@ -37,8 +37,6 @@ export default function AboutFacts() {
               )}
             </React.Fragment>))}
             
-          
-          
         </div>
         <div className="w-1/3 h-full flex justify-center">
           <div className=" text-txtColor text-9xl font-logo-bold flex flex-col items-center justify-center pr-32">
