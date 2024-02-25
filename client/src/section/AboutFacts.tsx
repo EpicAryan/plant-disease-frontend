@@ -1,5 +1,5 @@
 import React from "react";
-import { diseases1, diseases2, diseases3, bgland, bulkPotato, cblogo2 } from "../assets";
+import { diseases1, diseases2, diseases3, bgland, bulkPotato, cblogo2,diseasesBox } from "../assets";
 import {SVG1, SVG2} from '../component/SVGComponent';
 export default function AboutFacts() {
   const svgData =[
@@ -101,18 +101,30 @@ export default function AboutFacts() {
             <h1 className="text-wrap text-txtColor font-logo-bold text-7xl">Here are some tips for preventing potato diseases :</h1>
           </div>
           <div className="w-3/4 h-2/3 relative mt-16 ">
-            <div 
-              className="w-[45rem] h-[36rem] rounded-3xl bg-white mx-auto mr-64 border-2 border-txtColor" 
-              style={{clipPath: "polygon(0 0, 100% 0, 100% 100%, 75% 87%, 0 86%)"}}
-            >
-              <div className="text-wrap text-txtColor px-28 py-12 text-md font-semibold flex flex-col gap-4">
-                <p>Potato rot diseases are caused by either bacteria or fungi that can spread to commercial potato fields. To prevent spread, avoid planting potatoes with any signs of damage, rot or decay. Avoid carrying soil around on infected plants, shoes, vehicles or garden tools.</p>
-                <p>Keep the soil moist but not soggy. Don't plant potatoes and tomatoes near each other, as they are affected by the same diseases</p>
-                <p>Store potatoes in a cool, dark place with good ventilation, like a pantry or unheated basement. The ideal temperature range is 45-50°F.</p>
-                <p className="pl-40">Remove infected or diseased plants from the garden.</p>
-              </div>
-
-            </div>
+            
+              {/* <div 
+                className="w-[45rem] h-[36rem] bg-white mx-auto mr-64 ring-2 ring-pink-500 ring-inset" 
+                style={{
+                  clipPath: "polygon(0 0, 100% 0, 100% 100%, 75% 87%, 0 86%)",
+                }}
+                
+              > */}
+              <div
+                className="absolute top-0 left-[24rem] bottom-0 right-0  bg-no-repeat "
+                style={{
+                  backgroundImage: `url(${diseasesBox})`,
+                  backgroundSize: "75%",
+                  zIndex: -1,
+                }}
+              />
+                <div className="w-[50rem] h-1/2 text-wrap text-txtColor px-28 py-12 text-lg font-semibold flex flex-col gap-4 absolute top-0 left-[24rem] bottom-0 right-0">
+                  <p>Potato rot diseases are caused by either bacteria or fungi that can spread to commercial potato fields. To prevent spread, avoid planting potatoes with any signs of damage, rot or decay. Avoid carrying soil around on infected plants, shoes, vehicles or garden tools.</p>
+                  <p>Keep the soil moist but not soggy. Don't plant potatoes and tomatoes near each other, as they are affected by the same diseases</p>
+                  <p>Store potatoes in a cool, dark place with good ventilation, like a pantry or unheated basement. The ideal temperature range is 45-50°F.</p>
+                  <p className="pl-48">Remove infected or diseased plants from the garden.</p>
+                </div>
+              {/* </div> */}
+          
             <div className=" absolute bottom-0 left-0 ml-20">
               <img src={bulkPotato} alt="potatoImg" className="w-[46rem] h-[25rem]"/>
             </div>
