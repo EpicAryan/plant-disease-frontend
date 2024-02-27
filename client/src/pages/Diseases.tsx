@@ -94,7 +94,7 @@ const Diseases = () => {
         onDragEnter={handleDrag}
         onClick={onFormClick}
         onSubmit={(e) => e.preventDefault()}
-        className="w-[69rem] h-[33rem] text-center relative"
+        className="lg:w-[50rem] lg:h-[25rem] xl:w-[69rem] xl:h-[33rem] text-center relative"
       >
         <input
           ref={inputRef}
@@ -118,18 +118,17 @@ const Diseases = () => {
             />
           ) : (
             <>
-              <img src={dropIcon} alt="dropIcon" />
+              <img src={dropIcon} alt="dropIcon" className="lg:w-44 lg:h-44 xl:w-60 xl:h-60"/>
 
               <div>
                 <button
                   onClick={onButtonClick}
-                  className="cursor-pointer	p-1 outline-none bg-transparent font-logo-bold text-3xl text-black opacity-30"
+                  className="cursor-pointer	p-1 outline-none bg-transparent font-logo-bold lg:text-2xl xl:text-3xl text-black opacity-30"
+                  style={{ textShadow: "3px 3px 6px rgba(0, 0, 0, 0.5)" }}
                 >
-                  <p style={{ textShadow: "3px 3px 6px rgba(0, 0, 0, 0.5)" }}>
                     Drag and drop or Click Here
-                  </p>
                 </button>
-                <p className="text-txtHead opacity-80">
+                <p className="text-txtHead lg:text-sm xl:text-base opacity-80">
                   to upload your image ( max 2 MiB )
                 </p>
               </div>
@@ -147,11 +146,11 @@ const Diseases = () => {
         )}
       </form>
       {showSubmitButton && ( 
-        <button onClick={handleSubmit} className="w-48 h-12 font-bold rounded-full flex items-center justify-center gap-4 text-2xl mx-auto mt-10 bg-txtColor text-white hover:cursor-pointer z-20">
+        <button onClick={handleSubmit} className="lg:w-36 xl:w-48 h-12 font-bold rounded-full flex items-center justify-center lg:text-xl xl:text-2xl mt-10 bg-txtColor text-white hover:cursor-pointer z-20">
           Submit
         </button>
       )}
-      <div className="mt-8 text-lg" style={{ display: imagePreview ? 'none' : 'block' }}>
+      <div className="mt-8 lg:text-base xl:text-lg" style={{ display: imagePreview ? 'none' : 'block' }}>
         <span className="text-txtHead ">You can also provide</span>
         <span className="text-txtColor"> a link from the web</span>
       </div>
