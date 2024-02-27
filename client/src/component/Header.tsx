@@ -32,37 +32,37 @@ export default function Header() {
       }`}
     >
       <div className="">
-        <ul className="w-full h-24 flex items-center justify-between py-4">
+        <ul className="w-full lg:h-16 xl:h-24 flex items-center justify-between py-4">
           <Link to="/">
             <li className="flex items-center ps-20 pe-0">
-              <img src={cblogo} alt="logo" />
-              <p className="text-logoColor font-logo-bold text-2xl">POTATO</p>
+              <img src={cblogo} alt="logo" className="lg:w-8 lg:h-8 xl:w-10 xl:h-10"/>
+              <p className="text-logoColor font-logo-bold lg:text-xl xl:text-2xl">POTATO</p>
             </li>
           </Link>
           <Link
             to="/"
             className={location.pathname === "/" ? "active-link" : ""}
           >
-            <li className="text-2xl font-semibold">Home</li>
+            <li className="lg:text-xl xl:text-2xl font-semibold">Home</li>
           </Link>
           <Link
             to="/diseases"
             className={location.pathname === "/diseases" ? "active-link" : ""}
           >
-            <li className="text-2xl font-semibold">Diseases</li>
+            <li className="lg:text-xl xl:text-2xl font-semibold">Diseases</li>
           </Link>
           <Link
             to="/contact"
             className={location.pathname === "/contact" ? "active-link" : ""}
           >
-            <li className="text-2xl font-semibold">Contact</li>
+            <li className="lg:text-xl xl:text-2xl font-semibold">Contact</li>
           </Link>
           <Link
             to="/diseases"
           >
             <li className="ps-0 pe-20">
               {location.pathname !== "/diseases" && ( 
-                <button className="text-white bg-btnColor border-btnColor text-2xl hover:bg-btnColor2 hover:font-semibold rounded-full w-60 h-16">
+                <button className="text-white bg-btnColor border-btnColor lg:text-xl xl:text-2xl hover:bg-btnColor2 hover:font-semibold rounded-full lg:w-48 lg:h-12 xl:w-60 xl:h-16">
                   Diagnose here
                 </button>
               )}
